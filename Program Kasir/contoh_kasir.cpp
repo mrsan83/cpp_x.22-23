@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 int main(){
@@ -15,7 +16,8 @@ int main(){
   cout<<" 4. Salak      Rp 10.000\n";
   cout<<"=========================\n\n";
 
-  cout<<"Input Pembelian\n";
+  cout<<"     Input Pembelian\n";
+  cout<<"  input 0 bila sudah selesai\n";
   do{
       cout<<"Buah "<<i+1<<"    : ";
       cin>>beli[i];
@@ -44,6 +46,8 @@ int main(){
       }
       i++;
     }while(beli[i-1]>0);
+
+  system("clear");
 
   cout<<"=================================\n";
   cout<<"\t DAFTAR BELANJA\n";
