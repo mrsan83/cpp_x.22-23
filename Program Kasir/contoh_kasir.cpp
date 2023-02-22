@@ -17,7 +17,7 @@ int main(){
   cout<<"=========================\n\n";
 
   cout<<"     Input Pembelian\n";
-  cout<<"  input 0 bila sudah selesai\n";
+  cout<<" input 0 bila sudah selesai\n";
   do{
       cout<<"Buah "<<i+1<<"    : ";
       cin>>beli[i];
@@ -61,11 +61,23 @@ int main(){
     }
   }
   cout<<"=================================\n";
-  cout<<"Yang Harus Dibayar \t Rp "<<bayar<<endl;
-  cout<<"Pembayaran \t\t Rp ";
-  cin>>uang;
-  cout<<"Kembalian \t\t Rp "<<uang-bayar<<endl;
+  cout<<"Total Harga \t\t Rp "<<bayar<<endl;
+
+  if(bayar>100000){
+    cout<<"Diskon 10% \t\t Rp "<<0.1*bayar<<endl;
+    cout<<"Yang Harus Dibayar \t Rp "<<0.9*bayar<<endl;
+    cout<<"Pembayaran \t\t Rp ";
+    cin>>uang;
+    cout<<"Kembalian \t\t Rp "<<uang-(0.9*bayar)<<endl;
+  }else{
+    cout<<"Diskon 10% \t\t Rp 0"<<endl;
+    cout<<"Yang Harus Dibayar \t Rp "<<bayar<<endl;
+    cout<<"Pembayaran \t\t Rp ";
+    cin>>uang;
+    cout<<"Kembalian \t\t Rp "<<uang-bayar<<endl;
+  }
+  
   cout<<"=================================\n\n";
-  cout<<" TERIMA KASIH TELAH BERBELANJA";
+  cout<<" TERIMA KASIH TELAH BERBELANJA\n\n";
 
 }
